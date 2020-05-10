@@ -32,4 +32,9 @@ def self.find_by_name(name)
   self.all.find {|n| n.name == name}
 end 
 
+def self.find_or_create_by_name(name)
+  self.all.find do |n|
+    if n.name == name 
+      name
+
 end
